@@ -11,13 +11,6 @@ namespace XSLTransforms
 {
     public static class CSVParser
     {
-        //private readonly string pathToXCSV2CSVTransformer;
-
-        /*public CSVParser(string pathToXCSV2CSVTransformer)
-        {
-            this.pathToXCSV2CSVTransformer = pathToXCSV2CSVTransformer;
-        }*/
-
         public static async Task CSV2XCSV(string sCSV, string sXCSV)
         {
             await Task.Run(() =>
@@ -76,11 +69,6 @@ namespace XSLTransforms
         {
             await Task.Run(() =>
             {
-                /*var dParams = new XsltArgumentList();
-                dParams.AddParam("Delimiter", string.Empty, sDelimiter);
-
-                await Transformer.ApplyTransform(sXCSV, dParams, pathToXCSV2CSVTransformer, sCSV);*/
-
                 try
                 {
                     using (var inputFileStream = new FileStream(sXCSV, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
